@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="be">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дарожны слоўнік</title>
+<meta name="description" content="Руска-беларускі і беларуска-рускі слоўнік тэрмінаў правілаў дарожнага руху">
+<meta name="theme-color" content="#f3eee5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f1c19" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<main>
+<header>
+<div><h1>Дарожны слоўнік</h1><p>Правілы дарожнага руху</p></div>
+<button id="theme" aria-label="Змяніць тэму"><svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+</header>
+<div class="tabs" role="tablist" aria-label="Напрамак перакладу">
+<button role="tab" id="t-ru" aria-selected="true">Рус → Бел</button>
+<button role="tab" id="t-be" aria-selected="false">Бел → Рус</button>
+</div>
+<input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Пошук">
+<p id="info" aria-live="polite"></p>
+<ul id="out"></ul>
+<footer id="foot"></footer>
+</main>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
